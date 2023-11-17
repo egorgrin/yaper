@@ -1,0 +1,46 @@
+header {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  border-bottom: 1px solid #0000001a;
+
+  .header {
+    display: flex;
+    align-items: center;
+    .logo_wrapper {
+      flex-grow: 1;
+      .logo {
+        width: 175px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: $color-nav;
+    }
+    .btn {
+      margin-left: 50px;
+    }
+  }
+  @include screen(medium) {
+    height: 80px;
+    .header {
+      .logo_wrapper {
+        .logo {
+          width: 98px;
+        }
+      }
+      nav,
+      .btn {
+        display: none;
+      }
+      .hamb {
+        display: flex;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import 'cssdrop';
+@import 'service';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+:root {
+  font-size: 12px;
+}
+
+html,
+body,
+select {
+  font-size: 1rem;
+  color: $color-text-black;
+  font-family: 'Open Sans', sans-serif;
+}
+
+p {
+  font-size: 300;
+}
+
+body {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+}
+
+@import 'header';

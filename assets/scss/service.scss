@@ -1,0 +1,68 @@
+$color-main-dark: #F29100;
+$color-main-light: #F5A022;
+$color-text-black: #023035;
+$color-btn-bg: #2d85d2;
+$color-nav: #02303575;
+$btn-radius: 9px;
+
+.dn {
+  display: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 15px;
+  background-color: $color-btn-bg;
+  border-radius: $btn-radius;
+  font-weight: 700;
+  color: #fff;
+}
+
+.hamb {
+  cursor: pointer;
+  flex-direction: column;
+  padding: 3px;
+
+  span {
+    top: 0;
+    display: block;
+    width: 24px;
+    height: 2px;
+    position: relative;
+    background: $color-main-dark;
+    border-radius: 3px;
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+/* --Breakpoints-- */
+
+$small-screen: 575px;
+$medium-screen: 767px;
+$large-screen: 991px;
+// $xlarge-screen: 1199px;
+
+@mixin screen($point) {
+  @if $point == small {
+    @media (max-width: $small-screen) {
+      @content;
+    }
+  } @else if $point == medium {
+    @media (max-width: $medium-screen) {
+      @content;
+    }
+  } @else if $point == large {
+    @media (max-width: $large-screen) {
+      @content;
+    }
+  }
+}
