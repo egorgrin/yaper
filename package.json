@@ -1,0 +1,12 @@
+{
+  "name": "yaper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass:build": "sass assets/scss/styles.scss:assets/css/styles.scss",
+    "sass:watch": "sass --watch assets/scss/styles.scss:assets/css/styles.css --no-source-map"
+  },
+  "author": "",
+  "license": "ISC"
+}

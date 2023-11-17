@@ -1,0 +1,213 @@
+@charset "UTF-8";
+/* Обнуление */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  width: 100%;
+  line-height: 1;
+  text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input {
+  all: unset;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+select {
+  appearance: none;
+}
+
+a {
+  color: inherit;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li,
+nav li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* -------------------- */
+.dn {
+  display: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 15px;
+  background-color: #2d85d2;
+  border-radius: 9px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.hamb {
+  cursor: pointer;
+  flex-direction: column;
+  padding: 3px;
+}
+.hamb span {
+  top: 0;
+  display: block;
+  width: 24px;
+  height: 2px;
+  position: relative;
+  background: #F29100;
+  border-radius: 3px;
+}
+.hamb span:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+/* --Breakpoints-- */
+:root {
+  font-size: 12px;
+}
+
+html,
+body,
+select {
+  font-size: 1rem;
+  color: #023035;
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-size: 300;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1019607843);
+}
+header .header {
+  display: flex;
+  align-items: center;
+}
+header .header .logo_wrapper {
+  flex-grow: 1;
+}
+header .header .logo_wrapper .logo {
+  width: 175px;
+}
+header .header .logo_wrapper .logo img {
+  width: 100%;
+}
+header .header nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  color: rgba(2, 48, 53, 0.4588235294);
+}
+header .header .btn {
+  margin-left: 50px;
+}
+@media (max-width: 767px) {
+  header {
+    height: 80px;
+  }
+  header .header .logo_wrapper .logo {
+    width: 98px;
+  }
+  header .header nav,
+  header .header .btn {
+    display: none;
+  }
+  header .header .hamb {
+    display: flex;
+  }
+}
