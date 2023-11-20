@@ -504,3 +504,23 @@ header .header .btn {
     margin-left: 0;
   }
 }
+
+footer {
+  padding: 30px;
+}
+footer .footer {
+  display: flex;
+  justify-content: space-around;
+}
+footer .footer a {
+  font-size: 16px;
+  font-weight: 700;
+  color: #d6d6d6;
+}
+@media (max-width: 767px) {
+  footer .footer {
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
