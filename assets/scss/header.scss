@@ -26,10 +26,16 @@ header {
     nav {
       display: flex;
       align-items: center;
-      gap: 22px;
       color: $color-nav;
+      li {
+        font-size: 13px;
+        font-weight: 600;
+        padding: 22px;
+        cursor: pointer;
+      }
     }
     .btn {
+      font-size: 13px;
       margin-left: 50px;
     }
   }
