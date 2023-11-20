@@ -346,3 +346,60 @@ header .header .btn {
     margin-bottom: 60px;
   }
 }
+
+.about_wrapper .about {
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.about_wrapper .about .right,
+.about_wrapper .about .left {
+  flex-basis: 50%;
+}
+.about_wrapper .about .right {
+  min-width: 640px;
+  padding-top: 120px;
+  padding-left: 6rem;
+}
+.about_wrapper .about .right h2 {
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 35px;
+}
+.about_wrapper .about .right p {
+  margin-bottom: 35px;
+}
+.about_wrapper .about .right .btn {
+  font-size: 15px;
+}
+.about_wrapper .about .left img {
+  object-fit: cover;
+  object-position: center;
+}
+@media (max-width: 991px) {
+  .about_wrapper .about {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about_wrapper .about .right,
+  .about_wrapper .about .left {
+    flex-basis: auto;
+  }
+  .about_wrapper .about .right {
+    min-width: auto;
+    text-align: center;
+    order: 1;
+    padding: 0;
+    max-width: 500px;
+  }
+  .about_wrapper .about .left {
+    width: 80%;
+    text-align: center;
+    margin-bottom: 80px;
+  }
+}
+@media (max-width: 767px) {
+  .about_wrapper .about .left {
+    margin-bottom: 40px;
+  }
+}
