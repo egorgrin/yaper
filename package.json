@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "sass:build": "sass assets/scss/styles.scss:assets/css/styles.scss",
-    "sass:watch": "sass --watch assets/scss/styles.scss:assets/css/styles.css --no-source-map"
+    "sass:watch": "sass --watch assets/scss/index.scss:assets/css/index.css --no-source-map"
   },
   "author": "",
   "license": "ISC"

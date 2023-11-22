@@ -1,9 +1,43 @@
+@import 'cssdrop';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
 $color-main-dark: #F29100;
 $color-main-light: #F5A022;
 $color-text-black: #023035;
 $color-btn-bg: #2d85d2;
 $color-nav: #02303575;
 $btn-radius: 9px;
+
+:root {
+  font-size: 12px;
+}
+
+html,
+body,
+select {
+  font-size: 1rem;
+  color: $color-text-black;
+  font-family: 'Open Sans', sans-serif;
+}
+
+p, li {
+  line-height: 27px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+body {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+}
 
 .dn {
   display: none;
