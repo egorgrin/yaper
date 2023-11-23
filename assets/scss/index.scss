@@ -1,5 +1,7 @@
 @import 'service';
 @import 'header';
+@import 'presentation';
+@import 'footer';
 
 /* Home page */
 @import 'hero';
@@ -9,5 +11,3 @@
 
 /* Services page */
 @import 'services';
-
-@import 'footer';

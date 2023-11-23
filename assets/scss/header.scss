@@ -1,8 +1,10 @@
 header {
   background-color: #fff;
   position: sticky;
+
   top: 0;
-  z-index: 2;
+  left: 0;
+  z-index: 99;
   // box-shadow: rgba(53, 80, 128, 0.2) 0px 0px 10px 1px;
 
   display: flex;
@@ -24,14 +26,18 @@ header {
       }
     }
     nav {
-      display: flex;
-      align-items: center;
-      color: $color-nav;
-      a {
-        font-size: 13px;
-        font-weight: 600;
-        padding: 22px;
-        cursor: pointer;
+      ul {
+        display: flex;
+        align-items: center;
+        color: $color-nav;
+        li {
+          a {
+            font-size: 13px;
+            font-weight: 600;
+            padding: 22px;
+            cursor: pointer;
+          }
+        }
       }
     }
     .btn {
@@ -47,9 +53,36 @@ header {
           width: 98px;
         }
       }
-      nav,
+      .desktop_nav,
       .btn {
         display: none;
+      }
+      .mobile_nav {
+        display: block;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        max-height: 0;
+        width: 100%;
+        z-index: 9;
+
+        background-color: #fff;
+        transition: max-height 0.5s ease-out;
+
+        &.opened {
+          border-bottom: 1px solid #0000001a;
+          box-shadow: rgba(53, 80, 128, 0.2) 0px 2px 10px -2px
+        }
+        ul {
+          display: block;
+          width: 100%;
+          li {
+            a {
+              width: 100%;
+            }
+          }
+        }
       }
       .hamb {
         display: flex;
