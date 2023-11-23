@@ -30,6 +30,9 @@
         object-fit: cover;
         object-position: center;
       }
+      @include screen(medium) {
+        margin-bottom: 40px;
+      }
     }
   }
   @include screen(large) {
@@ -48,19 +51,11 @@
         order: 1;
         padding: 0;
         max-width: 500px;
-
       }
       .left {
         width: 80%;
         text-align: center;
         margin-bottom: 80px;
-      }
-    }
-  }
-  @include screen(medium) {
-    .about {
-      .left {
-        margin-bottom: 40px;
       }
     }
   }
