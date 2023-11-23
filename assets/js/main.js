@@ -1,14 +1,13 @@
 const header = document.querySelector('header');
-let headerHeight = +header.getBoundingClientRect().height.toFixed(1);
-
 const mobileNav = document.querySelector('.mobile_nav');
-let mobileNavHeight = +mobileNav.scrollHeight.toFixed(1);
-
 const burgerBtn = document.querySelector('.hamb');
 
 burgerBtn.addEventListener('click', toggleMenu);
 
 function toggleMenu() {
+  let headerHeight = +header.getBoundingClientRect().height.toFixed(1);
+  let mobileNavHeight = +mobileNav.scrollHeight.toFixed(1);
+
   mobileNav.style.borderTop = '3px solid #F29100';
 
   mobileNav.classList.toggle('opened');
@@ -22,4 +21,4 @@ function toggleMenu() {
       mobileNav.style.borderTop = null;
     }, 500);
   }
-}
+};
