@@ -1,13 +1,13 @@
 @import 'service';
-@import 'header';
-@import 'presentation';
-@import 'footer';
 
-/* Home page */
+@import 'header';
 @import 'hero';
 @import 'advantages';
-@import 'about';
+@import 'presentation';
 @import 'form';
+@import 'footer';
 
-/* Services page */
-@import 'services';
+/* Pages */
+
+@import 'contact';
+@import 'quote';
