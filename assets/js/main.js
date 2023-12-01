@@ -3,27 +3,51 @@ const mobileNav = document.querySelector('.mobile_nav');
 const mobileNavBody = document.querySelector('.mobile_nav_body');
 const burgerBtn = document.querySelector('.hamb');
 
-burgerBtn.addEventListener('click', toggleMenu);
-
 function toggleMenu() {
-  let headerHeight = +header.getBoundingClientRect().height.toFixed(1);
-  let mobileNavHeight = +mobileNav.scrollHeight.toFixed(1);
+  const headerHeight = header.getBoundingClientRect().height.toFixed(1);
+  const mobileNavHeight = mobileNav.scrollHeight.toFixed(1);
 
   mobileNav.style.borderTop = '3px solid #F29100';
-
   mobileNav.classList.toggle('opened');
-  if (mobileNav.classList.contains('opened')) {
-    mobileNav.style.maxHeight = `${mobileNavHeight}px`;
-    mobileNav.style.transform = `translate(-50%, ${headerHeight}px)`;
-    mobileNavBody.style.transform = `translateY(0)`;
 
-  } else {
-    mobileNavBody.style.transform = `translateY(-25%)`;
+  const isOpened = mobileNav.classList.contains('opened');
 
-    mobileNav.style.maxHeight = '0px';
-    mobileNav.style.transform = '0px';
+  mobileNav.style.maxHeight = isOpened ? `${mobileNavHeight}px` : '0px';
+  mobileNav.style.transform = isOpened
+    ? `translate(-50%, ${headerHeight}px)`
+    : '0px';
+  mobileNavBody.style.transform = isOpened
+    ? 'translateY(0)'
+    : 'translateY(-25%)';
+
+  if (!isOpened) {
     setTimeout(() => {
       mobileNav.style.borderTop = null;
     }, 500);
   }
-};
+}
+
+burgerBtn.addEventListener('click', toggleMenu);
+
+const contactBtn = document.querySelector('.contact_page .btn');
+
+function smoothScrollToForm(e) {
+  e.preventDefault();
+  const scrollTarget = document.querySelector('#form');
+
+  const elementPosition = scrollTarget.getBoundingClientRect().top;
+
+  const headerHeight = header.getBoundingClientRect().height.toFixed(1);
+
+  const offsetPosition = elementPosition - headerHeight;
+
+  window.scrollBy({
+    top: offsetPosition,
+    behavior: 'smooth',
+  });
+}
+let isContactPage = document.querySelector('.contact_page');
+
+if (isContactPage) {
+  contactBtn.addEventListener('click', smoothScrollToForm);
+}

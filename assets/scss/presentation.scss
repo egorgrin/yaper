@@ -1,13 +1,18 @@
 .presentation {
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  gap: 5%;
+
   &.pr_ltr {
     .text {
-      padding-left: 6rem;
+      // padding-left: 6rem;
     }
   }
 
   &.pr_rtl {
     .text {
-      padding-right: 6rem;
+      // padding-right: 6rem;
     }
   }
 
@@ -17,19 +22,18 @@
       padding: 0 6rem;
     }
   }
-
-  display: flex;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  gap: 1%;
   .text,
   .image {
     flex-basis: 50%;
   }
-
   .text {
     min-width: 640px;
-    padding-top: 120px;
+    padding-top: 100px;
+    h1 {
+      font-size: 34px;
+      font-weight: 800;
+      margin-bottom: 35px;
+    }
     h2 {
       font-size: 34px;
       font-weight: 800;

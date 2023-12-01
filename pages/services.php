@@ -1,56 +1,11 @@
-<!doctype html>
-<html lang="en">
+<!-- Add page meta here -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <link rel="stylesheet" href="../assets/css/index.css">
-
-  <title>Avior Financials</title>
+<title>Home page</title>
 </head>
 
 <body>
-  <header>
-    <div class="header container">
-      <div class="logo_wrapper">
-        <a href="#" class="logo">
-          <img src="../assets/img/logo.webp" alt="">
-        </a>
-      </div>
-      <nav class="desktop_nav">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a
-              href="file:///C:/Users/Acer/My%20Drive/Egor/%D0%94%D0%B5%D0%BB%D0%B0/Code/projects/yaper/services/index.html">Services</a>
-          </li>
-          <li><a href="/">Contact</a></li>
-        </ul>
-      </nav>
-      <a href="#" class="btn">Request Quote</a>
-      <div class="hamb hidden">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <nav class="mobile_nav hidden">
-        <ul class="mobile_nav_body">
-          <li><a href="/">Home</a></li>
-          <li><a
-              href="file:///C:/Users/Acer/My%20Drive/Egor/%D0%94%D0%B5%D0%BB%D0%B0/Code/projects/yaper/services/index.html">Services</a>
-          </li>
-          <li><a href="/">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+  <?php include CHUNKS . '/header.php'?>
 
-  </header>
   <main class="services_page">
     <section class="presentation_wrapper">
       <div class="presentation pr_ltr container">
@@ -86,7 +41,7 @@
 
         </div>
         <div class="image">
-          <img src="../assets/img/about.svg" alt="">
+          <img src="/assets/img/services.svg" alt="">
         </div>
       </div>
     </section>
@@ -98,7 +53,7 @@
         <div class="items">
           <div class="item">
             <div class="img_container">
-              <img src="../assets/img/adv1.svg" alt="">
+              <img src="/assets/img/advant1.svg" alt="">
             </div>
             <h3>Expertise</h3>
             <p>Our team of seasoned professionals brings extensive experience in financial management to ensure accuracy
@@ -106,7 +61,7 @@
           </div>
           <div class="item">
             <div class="img_container">
-              <img src="../assets/img/adv2.svg" alt="">
+              <img src="/assets/img/advant2.svg" alt="">
             </div>
             <h3>Customized Solutions</h3>
             <p>We understand that every business is unique. Our solutions are tailored to meet your specific needs,
@@ -114,7 +69,7 @@
           </div>
           <div class="item">
             <div class="img_container">
-              <img src="../assets/img/adv3.svg" alt="">
+              <img src="/assets/img/advant3.svg" alt="">
             </div>
             <h3>Reliability</h3>
             <p>Trust is at the core of our relationships. We pride ourselves on delivering reliable and timely services,
@@ -128,7 +83,7 @@
     <section class="presentation_wrapper">
       <div class="presentation pr_rtl container">
         <div class="image">
-          <img src="../assets/img/service1.svg" alt="">
+          <img src="/assets/img/service1.svg" alt="">
         </div>
         <div class="text">
           <div>
@@ -149,12 +104,12 @@
           </div>
         </div>
         <div class="image">
-          <img src="../assets/img/service2.webp" alt="">
+          <img src="/assets/img/service2.webp" alt="">
         </div>
       </div>
       <div class="presentation pr_rtl container">
         <div class="image">
-          <img src="../assets/img/service3.svg" alt="">
+          <img src="/assets/img/service3.svg" alt="">
         </div>
         <div class="text">
           <div>
@@ -166,42 +121,9 @@
 
       </div>
     </section>
-    <section class="form_wrapper">
-      <div class="form container">
-        <div class="title">
-          <h2>Ready to get started?
-          </h2>
-          <p>Contact Avior Financials today to discuss how our expert financial services can benefit your business. Whether you're a small startup or a growing enterprise, we have the solutions to take your financial management to the next level.
-          </p>
-        </div>
-        <form action="POST">
-          <div class="fields">
-            <div class="left">
-              <input required type="text" name="name" placeholder="Name">
-              <input required type="text" name="lastname" placeholder="Last Name">
-              <input required type="text" name="company" placeholder="Company">
-              <input required type="tel" name="phone" placeholder="Phone number">
-              <input required type="email" name="email" placeholder="Email">
-            </div>
-            <div class="right">
-              <textarea required name="message" placeholder="Message"></textarea>
-            </div>
-          </div>
-          <div class="form_btn">
-            <button type="submit" class="btn">Send</button>
-          </div>
-        </form>
-      </div>
-    </section>
+    <?php
+      $heading = "Ready to get started?";
+      $paragraph = "Contact Avior Financials today to discuss how our expert financial services can benefit your business. Whether you're a small startup or a growing enterprise, we have the solutions to take your financial management to the next level.";
+      include CHUNKS . '/form.php'
+      ?>
   </main>
-  <footer>
-    <div class="footer container">
-      <a href="#">Privacy statement</a>
-      <a href="#">Terms & Conditions</a>
-    </div>
-  </footer>
-</body>
-
-<script src="../assets/js/main.js"></script>
-
-</html>

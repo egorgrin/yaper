@@ -36,6 +36,9 @@ header {
             font-weight: 600;
             padding: 22px;
             cursor: pointer;
+            &:hover, &:focus {
+              text-decoration: underline;
+            }
           }
         }
       }
